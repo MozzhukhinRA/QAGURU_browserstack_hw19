@@ -6,7 +6,6 @@ from selene import browser, support
 import os
 
 import config
-import utils
 from appium import webdriver
 
 from utils.attach_allure import attach_bstack_video
