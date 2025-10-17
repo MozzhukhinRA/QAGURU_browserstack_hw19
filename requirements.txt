@@ -5,3 +5,4 @@ allure-python-commons~=2.15.0
 config~=0.5.1
 requests
 Appium-Python-Client~=5.2.4
+python-dotenv
