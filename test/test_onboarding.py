@@ -1,9 +1,28 @@
 import allure
+import pytest
 from appium.webdriver.common.appiumby import AppiumBy
 from selene import have, be
 from selene.support.shared import browser
+from .marks import microservice, layer, owner, tm4j
 
 
+pytestmark = [
+    layer("Android"),
+    owner("mozzhukhinra"),
+    allure.feature("Pull Requests")
+]
+
+OWNER = "allure-framework"
+REPO = "allure2"
+BRANCH = "new-feature"
+
+
+@tm4j("AE-T6")
+@microservice("Mobile")
+@allure.story("Pull test for Bstack")
+@pytest.mark.phone
+@pytest.mark.regress
+@pytest.mark.smoke
 @allure.title('Test Wikipedia onboarding screens')
 def test_wikipedia_onboarding():
     with allure.step('Verify first onboarding screen'):
